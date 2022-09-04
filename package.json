@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -34,6 +35,8 @@
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "prisma": "^4.3.1",
     "tailwindcss": "^3.1.8",
@@ -41,5 +44,8 @@
   },
   "ct3aMetadata": {
     "initVersion": "5.9.0"
+  },
+    "lint-staged": {
+    "src/**": "yarn lint"
   }
 }
