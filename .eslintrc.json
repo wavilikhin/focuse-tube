@@ -1,19 +1,28 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "plugins": ["@typescript-eslint"],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
-  "rules": {
-    "no-multi-spaces": "error",
-    "no-multiple-empty-lines": "error",
-    "max-len": ["error", { 
-      "code": 90,
-      "ignoreComments": true,
-      "ignoreStrings": true,
-      "ignoreUrls": true 
-    }],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": false }]
-  }
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["@typescript-eslint", "prettier"],
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-console": "warn",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 90,
+                "ignoreComments": true,
+                "ignoreStrings": true,
+                "ignoreUrls": true
+            }
+        ],
+        "brace-style": ["error", "1tbs", { "allowSingleLine": false }]
+    }
 }
